@@ -1,0 +1,59 @@
+/* Hero Section */
+.hero {
+    position: relative; /* Position to allow overlay positioning */
+    background-size: cover;
+    background-position: center;
+    height: 40vh; /* Adjust the height of the hero section */
+    color: white; /* Ensure the text is white for contrast */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+/* Add overlay for better text visibility */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+/* Content in the hero section */
+.hero-content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 1; /* Make sure content is above the overlay */
+    padding-left: 20px; /* Padding for left alignment */
+    padding-right: 20px; /* Padding for right alignment */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Adjust font size for heading */
+    margin-bottom: 15px; /* Add space below heading */
+    font-weight: bold; /* Make the heading bold */
+}
+
+.hero p {
+    font-size: 1.25rem; /* Adjust font size for paragraph */
+    color: white; /* Ensure text color is white */
+}
+
+/* Mobile responsiveness: Hero section */
+@media (max-width: 767px) {
+    .hero {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Smaller font size for paragraph */
+        text-align: center;
+    }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - Safeplay</title>
+
+    <!-- Link to external CSS -->
+    <link href="./styling/services.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styling/web.css">
+    <link rel="icon" href="assets/cloud-solid.svg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+
+    <style>
+        .step-circle {
+            width: 100px; /* Increase the width of the circle */
+            height: 80px; /* Increase the height of the circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 90px;
+            margin: 0 auto; /* Center the circle horizontally */
+            font-size: 2rem; /* Increase the font size of icons */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SafePlay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="web.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
+                            <li><a class="dropdown-item" href="app.html">Android Development</a></li>
+                            <li><a class="dropdown-item" href="sft.html">Software Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex justify-content-start align-items-center text-start" style="background-image: url('https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg'); height: 40vh; background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div> <!-- Add overlay div -->
+        <div class="container">
+            <div class="hero-content">
+                <h1 id="hero-heading" class="display-3 mt-5 fs-2">Building Modern, Scalable, and Responsive Websites</h1>
+                <p id="hero-text" class="fs-4 mb-4">Enhancing your online presence with cutting-edge web solutions.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="introduction" class="py-5 bg-dark" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 style="color: white;">Welcome to Our Application Development Services</h2>
+                    <p class="lead" style="color: white;">We specialize in developing scalable, high-performance web and mobile applications. Whether you need a custom app for your business or a robust solution to enhance your operations, we’ve got you covered. Our development approach prioritizes user experience, performance, and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <section id="roadmap" class="py-5" style="background-color: rgb(255, 255, 255);">
+        <div class="container">
+            <h2 class="text-center mb-4">App Development Roadmap</h2>
+            <p class="text-center mb-5">A step-by-step journey of how we bring your app idea to life. Here's what you can expect during the development process.</p>
+
+            <div class="row">
+                <!-- Roadmap Items -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-primary text-white mx-auto mb-3">
+                            <i class="fas fa-search fa-2x"></i>
+                        </div>
+                        <h5>Discovery & Planning</h5>
+                        <p>Define the project goals, target audience, features, and platform requirements.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-success text-white mx-auto mb-3">
+                            <i class="fas fa-pencil-ruler fa-2x"></i>
+                        </div>
+                        <h5>Design</h5>
+                        <p>UI/UX designs and prototypes for user flows and app layout.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-warning text-white mx-auto mb-3">
+                            <i class="fas fa-cogs fa-2x"></i>
+                        </div>
+                        <h5>Development</h5>
+                        <p>Build the back-end, front-end, and integrate APIs for full functionality.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-info text-white mx-auto mb-3">
+                            <i class="fas fa-bug fa-2x"></i>
+                        </div>
+                        <h5>Testing</h5>
+                        <p>QA testing, user testing, and bug fixing to ensure stability and performance.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-danger text-white mx-auto mb-3">
+                            <i class="fas fa-rocket fa-2x"></i>
+                        </div>
+                        <h5>Launch & Deployment</h5>
+                        <p>Deploy the app to App Store and Google Play, and monitor feedback.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center">
+                        <div class="step-circle bg-dark text-white mx-auto mb-3">
+                            <i class="fas fa-cogs fa-2x"></i>
+                        </div>
+                        <h5>Post-Launch Support</h5>
+                        <p>Regular updates, maintenance, and user support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-secondary text-center d-flex align-items-center justify-content-center" style="padding: 40px;">
+        <div class="text-white">
+            <h4 class="mb-0" style="color: white;">Need a Custom App for Your Business?</h4>
+            <p class="mb-0 fs-5 mt-1" style="color: white;">We specialize in creating high-performance, scalable mobile and web applications.</p>
+            <a href="contact.html" class="btn btn-outline-light mt-2">Get Started</a>
+        </div>
+    </div>
+    
+    
+    
+
+    <!-- Core Services Section -->
+    <section id="core-services" class="py-5" style="background-color: var(--primary-color);">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--secondary-color);">Core Application Development Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Service 1: Custom Web App Development -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">Custom Web Application Development</h5>
+                            <p class="card-text">We build custom web applications tailored to your business needs, ensuring scalability, security, and a seamless user experience across all platforms.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 2: Mobile App Development -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text">Our mobile app development services focus on creating intuitive and high-performance apps for both iOS and Android. From concept to deployment, we build apps that engage and convert.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 3: Cross-Platform Development -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-sync-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">Cross-Platform App Development</h5>
+                            <p class="card-text">Reach users on multiple platforms with a single codebase. We use technologies like React Native and Flutter to create apps that run smoothly on both iOS and Android devices.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 4: UI/UX Design for Apps -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-paint-brush fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">UI/UX Design for Apps</h5>
+                            <p class="card-text">We design user-friendly, intuitive, and visually appealing interfaces that ensure your app offers a great user experience, keeping your users engaged.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 5: Backend Development for Apps -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">Backend Development for Apps</h5>
+                            <p class="card-text">We build robust back-end systems to power your app, using scalable and secure technologies like Node.js, Python, and Ruby on Rails for handling databases and server-side logic.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 6: API Integration -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-plug fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">API Integration</h5>
+                            <p class="card-text">We integrate third-party services and APIs to extend the functionality of your app, ensuring seamless communication with external services and data sources.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 7: App Security & Maintenance -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">App Security & Maintenance</h5>
+                            <p class="card-text">We provide ongoing app maintenance and security updates, ensuring your app remains secure, efficient, and up-to-date with the latest features and standards.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service 8: Cloud App Development -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h5 class="card-title">Cloud App Development</h5>
+                            <p class="card-text">We leverage cloud technologies to build scalable, high-performance applications that deliver enhanced flexibility, security, and cost-effectiveness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h3>Ready to Get Started?</h3>
+            <p class="lead">Contact us today to discuss your next project and how we can help your business grow securely.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Company Info -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase">Safeplay</h5>
+                    <p>SafePlay is a forward-thinking technology company focused on developing innovative privacy-conscious software, mobile apps, and IoT solutions. We help businesses harness the power of technology while prioritizing data security and user privacy.</p>
+                </div>
+                
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase">Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Social Media Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="https://instagram.com/safeplay_ai" class="text-white text-decoration-none me-3"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link to external JS -->
+    <script src="./scripts/app.js"></script>
+    <script src=""></script>
+
+</body>
+</html>
