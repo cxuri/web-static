@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page with Full-Screen Image</title>
+
+    <!-- Link to external CSS -->
+    <link href="./styling/main.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SafePlay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Full Screen Image) -->
+    <section class="hero">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="hero-text-1 fade-text">Embracing Security</h2>
+                <h5 id="slideshow-text" class="fade-text">
+                    At SafePlay, your security is our top priority—because we believe that peace of mind is the foundation of trust.
+                </h5>
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h3 class="text-center mb-4" style="font-size: 2.5rem; color: rgb(30, 62, 98);">Our Services</h3>
+            <div class="row text-center">
+                <!-- Service Card 1: Web Development -->
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm service-card" style="border: none; background-color: rgb(255, 101, 0); height: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Icon -->
+                            <i class="fas fa-laptop-code fs-1 mb-3" style="color: #fff;"></i>
+                            <h5 class="card-title" style="color: white;">Web Development</h5>
+                            <p class="card-text" style="color: white;">We build responsive and scalable websites with the latest technologies to enhance your online presence.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service Card 2: App Development -->
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm service-card" style="border: none; background-color: rgb(30, 62, 98); height: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Icon -->
+                            <i class="fas fa-mobile-alt fs-1 mb-3" style="color: #fff;"></i>
+                            <h5 class="card-title" style="color: white;">App Development</h5>
+                            <p class="card-text" style="color: white;">Our expert developers create intuitive mobile apps for both iOS and Android, optimized for performance and user experience.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service Card 3: Software Development -->
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm service-card" style="border: none; background-color: rgb(11, 25, 44); height: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Icon -->
+                            <i class="fas fa-cogs fs-1 mb-3" style="color: #fff;"></i>
+                            <h5 class="card-title" style="color: white;">Software Development</h5>
+                            <p class="card-text" style="color: white;">We develop custom software solutions to meet the unique needs of your business, boosting efficiency and scalability.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Service Card 4: IoT & Embedded Systems Development -->
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm service-card" style="border: none; background-color: rgb(0, 0, 0); height: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Icon -->
+                            <i class="fas fa-cloud fs-1 mb-3" style="color: #fff;"></i>
+                            <h5 class="card-title" style="color: white;">IoT & Embedded Systems</h5>
+                            <p class="card-text" style="color: white;">We design and develop Internet of Things (IoT) solutions and embedded systems that integrate seamlessly with modern technologies.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Hover effect for the service cards */
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .service-card:hover {
+            transform: translateY(-10px); /* Slight upward movement on hover */
+        }
+    
+        /* Control the size of the service icons */
+        .service-card i {
+            font-size: 4rem; /* Larger icons */
+        }
+    </style>
+    
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h3>Let's Talk About Your Project</h3>
+            <p class="lead">Get in touch with us today and start turning your ideas into reality!</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Send Message</a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-us py-5" style="background-image: url(https://cdn.pixabay.com/photo/2022/01/06/11/44/envelopes-6919301_1280.jpg);">
+        <div class="text-center">
+            <h1 style="color: taupe;" class="mb-3">We Will get to you as soon as possible</h1>
+        </div>
+        <div class="container" style="max-width: 600px; background-color: #ffffff; color: black; padding: 30px; border-radius: 10px;">
+            <h2 class="text-center mb-4" style="font-size: 2.5rem; color: rgb(11, 25, 44);">Contact Us</h2>
+            
+            <!-- Contact Form -->
+            <form>
+                <!-- Name Field -->
+                <div class="mb-3">
+                    <label for="name" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <!-- Message Field -->
+                <div class="mb-3">
+                    <label for="message" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Company Info -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Safeplay</h5>
+                </div>
+                
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Social Media Links -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="https://instagram.com/safeplay_ai" class="text-white text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to external JS -->
+    <script src="./scripts/home.js"></script>
+</body>
+</html>

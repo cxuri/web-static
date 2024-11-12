@@ -1,0 +1,100 @@
+
+/* Navbar */
+.navbar {
+    z-index: 1000;
+    background-color: transparent !important; /* Ensure transparent background */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for background & shadow */
+}
+
+/* Navbar links */
+.navbar .navbar-nav .nav-link {
+    color: rgb(255, 101, 0) !important; /* Orange text for navbar links */
+    font-size: 1.1rem; /* Optional: slightly larger text for better readability */
+}
+
+/* Navbar links hover effect */
+.navbar .navbar-nav .nav-link:hover {
+    color: black !important; /* Change link color to black on hover */
+}
+
+/* Navbar brand (logo) */
+.navbar a.navbar-brand {
+    color: rgb(255, 101, 0) !important; /* Orange color for brand/logo text */
+}
+
+/* Navbar brand hover effect */
+.navbar a.navbar-brand:hover {
+    color: black !important; /* Change brand logo color to black on hover */
+}
+
+/* Navbar hover effect (change background and add shadow) */
+.navbar:hover {
+    background-color: white !important; /* White background on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Navbar on scroll - add shadow for contrast */
+.navbar.scrolled{
+    background-color: white !important; /* White background when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow when scrolled */
+}
+
+/* Active link styling */
+.navbar .navbar-nav .nav-link.active {
+    color: rgb(255, 101, 0) !important; /* Orange color for active links */
+}
+
+/* Change active link color on navbar hover (white background) */
+.navbar:hover .navbar-nav .nav-link.active {
+    color: rgb(11, 25, 44) !important; /* Dark blue for active link when hovered */
+}
+
+.hero-section {
+    background-image: url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;  /* Ensures the pseudo-element doesn't overflow out of the container */
+}
+
+.hero-section h1, .hero-section p {
+    font-size: 3rem;
+    z-index: 2; /* Ensure text stays above the dark overlay */
+    color: white;
+    position: relative; /* Ensure text stays above the overlay */
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Adjust the font size for paragraphs */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
+    z-index: 1; /* Ensure overlay is behind the text */
+    pointer-events: none; /* Prevent the overlay from blocking interactions */
+}
+
+.service-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.service-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
