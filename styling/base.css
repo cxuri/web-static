@@ -1,0 +1,204 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Apply Open Sans for body text globally */
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Body text and general content */
+body {
+    font-family: "Open Sans", sans-serif; /* Default font for body */
+    line-height: 1.6;
+    color: #333; /* Default text color for readability */
+}
+
+/* Header font style */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans 3", sans-serif; /* Headers with Source Sans 3 */
+    font-weight: 700; /* Bold for emphasis */
+    color: #222; /* Dark color for headings */
+}
+
+/* Ensure the hero card text is white */
+.fade-text {
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.fade-text.show {
+    opacity: 1;
+}
+
+.hero h2 {
+    font-family: "Source Sans 3", sans-serif; /* Hero section heading */
+    font-size: 2.2rem; /* Reduced size */
+    margin-bottom: 1.5rem;
+    color: rgb(255, 101, 0);
+    font-weight: 600;
+}
+
+.hero h5 {
+    font-family: "Open Sans", sans-serif; /* Use Open Sans for readability */
+    text-align: justify;
+    font-size: 0.9rem; /* Slightly larger size for readability */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 450;
+    color: #f4f4f4;
+}
+
+.hero {
+    background-image: url(../assets/homepage-100vh.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff6c0b; /* Transparent background */
+    color: #ffffff; /* Orange text */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.bod {
+    padding: 40px;
+}
+
+/* The text will become fully visible once the 'show' class is added */
+.show#slideshow-text, .show#hero-card-1 {
+    opacity: 1 !important;  /* Makes the element visible */
+}
+
+/* Adjust navbar text for better visibility when scrolled */
+.scrolled.navbar .navbar-brand, 
+.scrolled.navbar .nav-link {
+    color: black !important; /* Ensure navbar brand and links change to black when scrolled */
+}
+
+/* Adjust burger icon color when scrolled */
+.scrolled.navbar .navbar-toggler i {
+    color: black;
+}
+
+.scrolled.navbar {
+    background-color: white;
+}
+
+.scroll-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the arrow is positioned relative for animation */
+}
+
+.scroll-arrow a {
+    color: white;
+    font-size: 2rem; /* Adjust the size of the arrow */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    animation: bounce 1s infinite; /* Animation to make it bounce */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.scroll-arrow a:hover {
+    transform: scale(1.2); /* Slightly enlarge the arrow on hover */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Moves the arrow up by 10px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Style for industry item button */
+.industry-btn {
+    font-family: "Open Sans", sans-serif; /* Use Open Sans for readability */
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.industry-btn i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+/* Hover effect for the button */
+.industry-btn:hover {
+    color: #0056b3;
+}
+
+/* Industry details initially hidden */
+.industry-details {
+    display: none;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Show expanded details */
+.industry-details.show {
+    display: block;
+    opacity: 1;
+    max-height: 1000px; /* Arbitrary high value to allow expansion */
+}
+
+/* Hover effect for industry items */
+.industry-item:hover .industry-btn {
+    color: #0056b3;
+}
+
+/* Image Styling (Make it responsive) */
+.industry-img {
+    width: 100%;
+    max-width: 100%; /* Ensures the image fits inside the container */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+}
+
+/* Style the section to ensure proper layout */
+.industries-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.industries-banner .container .row .col-md-6 {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .industries-banner .container .row .col-md-6 {
+        flex: 0 0 100%;
+    }
+    .industry-btn {
+        font-size: 1rem;
+    }
+}

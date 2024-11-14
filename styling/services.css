@@ -1,77 +1,63 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-/* Navbar */
-.navbar {
-    z-index: 1000;
-    background-color: transparent !important; /* Ensure transparent background */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for background & shadow */
+/* Apply Open Sans for body text globally */
+* {
+    font-family: "Open Sans", sans-serif;
 }
 
-/* Navbar links */
-.navbar .navbar-nav .nav-link {
-    color: rgb(255, 101, 0) !important; /* Orange text for navbar links */
-    font-size: 1.1rem; /* Optional: slightly larger text for better readability */
+/* Body text and general content */
+body {
+    font-family: "Open Sans", sans-serif; /* Default font for body */
+    line-height: 1.6;
+    color: #333; /* Default text color for readability */
 }
 
-/* Navbar links hover effect */
-.navbar .navbar-nav .nav-link:hover {
-    color: black !important; /* Change link color to black on hover */
+/* Header font style */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans 3", sans-serif; /* Headers with Source Sans 3 */
+    font-weight: 700; /* Bold for emphasis */
+    color: #222; /* Dark color for headings */
 }
 
-/* Navbar brand (logo) */
-.navbar a.navbar-brand {
-    color: rgb(255, 101, 0) !important; /* Orange color for brand/logo text */
+/* Ensure the hero card text is white */
+.fade-text {
+    transition: opacity 1s ease;
+    opacity: 0;
 }
 
-/* Navbar brand hover effect */
-.navbar a.navbar-brand:hover {
-    color: black !important; /* Change brand logo color to black on hover */
+.fade-text.show {
+    opacity: 1;
 }
 
-/* Navbar hover effect (change background and add shadow) */
-.navbar:hover {
-    background-color: white !important; /* White background on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+/* The text will become fully visible once the 'show' class is added */
+.show#slideshow-text, .show#hero-card-1 {
+    opacity: 1 !important;  /* Makes the element visible */
 }
 
-/* Navbar on scroll - add shadow for contrast */
-.navbar.scrolled{
-    background-color: white !important; /* White background when scrolled */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow when scrolled */
+/* Adjust navbar text for better visibility when scrolled */
+.scrolled.navbar .navbar-brand, 
+.scrolled.navbar .nav-link {
+    color: black !important; /* Ensure navbar brand and links change to black when scrolled */
 }
 
-/* Active link styling */
-.navbar .navbar-nav .nav-link.active {
-    color: rgb(255, 101, 0) !important; /* Orange color for active links */
+/* Adjust burger icon color when scrolled */
+.scrolled.navbar .navbar-toggler i {
+    color: black;
 }
 
-/* Change active link color on navbar hover (white background) */
-.navbar:hover .navbar-nav .nav-link.active {
-    color: rgb(11, 25, 44) !important; /* Dark blue for active link when hovered */
+.scrolled.navbar {
+    background-color: white;
 }
 
 .hero-section {
-    background-image: url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg'); /* Replace with your hero image */
+    position: relative;
+    background-image: url('https://cdn.pixabay.com/photo/2015/05/28/14/53/ux-788002_1280.jpg');
+    height: 80vh;
     background-size: cover;
-    background-position: center;
-    height: 60vh;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;  /* Ensures the pseudo-element doesn't overflow out of the container */
-}
-
-.hero-section h1, .hero-section p {
-    font-size: 3rem;
-    z-index: 2; /* Ensure text stays above the dark overlay */
-    color: white;
-    position: relative; /* Ensure text stays above the overlay */
-}
-
-.hero-section p {
-    font-size: 1.25rem; /* Adjust the font size for paragraphs */
 }
 
 .hero-section::before {
@@ -79,22 +65,99 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay with 40% opacity */
-    z-index: 1; /* Ensure overlay is behind the text */
-    pointer-events: none; /* Prevent the overlay from blocking interactions */
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay with 40% opacity */
+    z-index: 1; /* Ensure it's above the background image but below the content */
 }
 
-.service-card img {
-    height: 150px;
-    object-fit: cover;
+.hero-section h1, p {
+    position: relative; /* Keeps content above the overlay */
+    z-index: 2; /* Ensures the text/content is above the dimmed background */
+    color: white; /* Ensures the text is visible on the darkened background */
 }
 
+/* General styles for the entire section */
+#services, #startup {
+    padding: 5rem 0;
+}
+
+/* Section title style */
+#services h2, #startup h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Service Card Style */
 .service-card {
-    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image style inside the card */
+.service-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Service Card Body Text */
+.service-card .card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.service-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-card .card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Startup Section */
+#startup {
+    background: linear-gradient(135deg, #ff8c00, #ff5f00);
+    color: white;
+}
+
+#startup .section-text {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+#startup .btn-primary {
+    background-color: #ff5f00;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#startup .btn-primary:hover {
+    background-color: #e04d00;
+}
+
+/* Ensures text is aligned properly on smaller screens */
+@media (max-width: 768px) {
+    #startup .col-md-6 {
+        text-align: center;
+    }
 }

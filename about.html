@@ -6,8 +6,9 @@
     <title>About Us - SafePlay</title>
     <link rel="icon" href="assets/favicon.ico"> <!-- Add favicon -->
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="./styling/main.css">
+    <link rel="stylesheet" href="./styling/about.css">
     <link rel="icon" href="assets/cloud-solid.svg" type="image/x-icon">
+    <script src="/scripts/home.js"></script>
 
 
     <!-- Bootstrap CSS -->
@@ -21,26 +22,28 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">SafePlay</a>
+            <a class="navbar-brand font-weight-bold text-white" href="#">SafePlay</a>
+            <!-- Custom Burger Icon (Font Awesome) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars text-white" style="font-size: 30px;"></i> <!-- Custom burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link text-white" href="./about.html">About</a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services Home</a></li>
                             <li><a class="dropdown-item" href="web.html">Web Development</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
                             <li><a class="dropdown-item" href="app.html">Android Development</a></li>
@@ -48,21 +51,19 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link text-white" href="./contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>   
 
     <!-- Hero Section -->
     
-    
-    <header class="hero-section d-flex justify-content-center align-items-center px-5">
+    <header class="hero-section d-flex justify-content-start align-items-center text-start px-5">
         <div class="hero-content">
-            <h1 class="display-4 font-weight-bold">Welcome to SafePlay</h1>
-            <p class="lead">Committed to ensuring a safer and more enjoyable experience for all</p>
-            <a href="#about" class="btn btn-light btn-lg">Learn More</a>
+            <h1 class="display-4 font-weight-bold">Nice to Meet You</h1>
+            <p class="lead">We’re SafePlay, and we’re committed to ensuring a safer and more enjoyable experience for all.</p>
         </div>
     </header>
     
@@ -73,9 +74,8 @@
             <!-- Left Side: About Company -->
             <div class="col-md-6">
                 <h2 class="section-title">Welcome to our company</h2>
-                <p class="section-text mt-4">
-                    At SafePlay, we offer a wide range of services including <strong>Ethical Hacking</strong>, where we perform penetration testing and vulnerability assessments to help businesses safeguard their digital assets. Our <strong>Software Development</strong> services focus on creating high-performance, scalable solutions tailored to meet the unique needs of your business, whether for desktop or enterprise-level applications. With <strong>Application Development</strong>, we design both mobile and web applications to ensure seamless user experiences across platforms. Our <strong>Web Development</strong> services specialize in building responsive, custom websites that reflect your brand and enhance user engagement. Lastly, we excel in <strong>IoT & Embedded Systems Development</strong>, providing IoT solutions and embedded systems that connect devices, automate tasks, and enable real-time data analysis for smarter, more efficient environments.
-                </p>
+                <p class="section-text mt-4" id="par">
+                    At SafePlay, we offer a wide range of services, including Software Development, where we create high-performance, scalable solutions tailored to meet the unique needs of your business, whether for desktop or enterprise-level applications. With Application Development, we design both mobile and web applications to ensure seamless user experiences across platforms. Our Web Development services specialize in building responsive, custom websites that reflect your brand and enhance user engagement. Lastly, we excel in IoT & Embedded Systems Development, providing IoT solutions and embedded systems that connect devices, automate tasks, and enable real-time data analysis for smarter, more efficient environments.</p>
             </div>
             
             <!-- Right Side: Image -->
@@ -85,27 +85,35 @@
         </div>
     </div>
 
-    <hr>
-
     <!-- Mission and Vision Sections -->
-    <div class="container my-5">
-        <!-- Mission Section -->
-        <section class="mission-section mb-5">
-            <div class="mission-content">
-                <h4 class="section-title"><i class="fas fa-bullseye"></i> Our Mission, Why We Exist</h4>
-                <p class="section-text">Our mission is to empower businesses and clients with secure, scalable, and innovative technology solutions. We aim to build a safer and more efficient digital future by providing services that not only meet today’s needs but also anticipate tomorrow's challenges.</p>
+    <div class="container my-5 mission-vision-bg">
+        <!-- Mission and Vision Section -->
+        <h3 class="text-center mb-4">Our Mission and Vision</h3>
+        <div class="row">
+            <!-- Mission Section -->
+            <div class="col-md-6">
+                <div class="text-center mb-3">
+                    <!-- Mission Icon -->
+                    <i class="fas fa-bullseye fs-1"></i>
+                </div>
+                <h4 class="text-center">Our Mission</h4>
+                <p>Our mission is to empower businesses and clients with secure, scalable, and innovative technology solutions. We are committed to building a safer and more efficient digital future by providing services that address today’s needs while anticipating tomorrow's challenges.</p>
             </div>
-        </section>
     
-        <!-- Vision Section -->
-        <section class="vision-section">
-            <div class="vision-content">
-                <h4 class="section-title"><i class="fas fa-eye"></i> Our Vision, What We Want to Achieve</h4>
-                <p class="section-text">We envision a world where businesses, regardless of size or industry, have access to world-class security and technology solutions. As we grow, we aim to become a trusted partner for startups and enterprises alike, helping them achieve digital transformation while keeping their data safe and secure.</p>
+            <!-- Vision Section -->
+            <div class="col-md-6">
+                <div class="text-center mb-3">
+                    <!-- Vision Icon -->
+                    <i class="fas fa-eye fs-1"></i>
+                </div>
+                <h4 class="text-center">Our Vision</h4>
+                <p>We envision a world where businesses of all sizes have access to cutting-edge technology and world-class security solutions. As we grow, we aim to be a trusted partner for businesses, helping them achieve digital transformation while ensuring their data and operations remain secure.</p>
             </div>
-        </section>
+        </div>
     </div>
-    <hr>
+    
+    
+
     <!-- Developers Section -->
     <section id="developers" class="py-5 bg-light">
         <div class="container">
@@ -113,7 +121,7 @@
             <div class="row justify-content-center">
                 <!-- Founder 1 -->
                 <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm" style="padding: 15px;">
                         <!-- Default profile image placeholder -->
                         <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" class="card-img-top img-fluid" alt="Founder 1">
                         <div class="card-body text-center">
@@ -126,7 +134,7 @@
     
                 <!-- Founder 2 -->
                 <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm" style="padding: 15px;">
                         <!-- Default profile image placeholder -->
                         <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" class="card-img-top img-fluid" alt="Founder 2">
                         <div class="card-body text-center">

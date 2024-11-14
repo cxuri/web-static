@@ -1,59 +1,89 @@
-/* Hero Section */
-.hero {
-    position: relative; /* Position to allow overlay positioning */
-    background-size: cover;
-    background-position: center;
-    height: 40vh; /* Adjust the height of the hero section */
-    color: white; /* Ensure the text is white for contrast */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Apply Open Sans for body text globally */
+* {
+    font-family: "Open Sans", sans-serif;
 }
 
-/* Add overlay for better text visibility */
+/* Body text and general content */
+body {
+    font-family: "Open Sans", sans-serif; /* Default font for body */
+    line-height: 1.6;
+    color: #333; /* Default text color for readability */
+}
+
+/* Header font style */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans 3", sans-serif; /* Headers with Source Sans 3 */
+    font-weight: 700; /* Bold for emphasis */
+    color: #222; /* Dark color for headings */
+}
+
+/* Ensure the hero card text is white */
+.fade-text {
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.fade-text.show {
+    opacity: 1;
+}
+
+/* The text will become fully visible once the 'show' class is added */
+.show#slideshow-text, .show#hero-card-1 {
+    opacity: 1 !important;  /* Makes the element visible */
+}
+
+/* Adjust navbar text for better visibility when scrolled */
+.scrolled.navbar .navbar-brand, 
+.scrolled.navbar .nav-link {
+    color: black !important; /* Ensure navbar brand and links change to black when scrolled */
+}
+
+/* Adjust burger icon color when scrolled */
+.scrolled.navbar .navbar-toggler i {
+    color: black;
+}
+
+.scrolled.navbar {
+    background-color: white;
+}
+
+
+.hero {
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg');
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
-    z-index: 0; /* Ensure the overlay is behind the content */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for dimming */
+    z-index: 1; /* Make sure the overlay is above the background but below the content */
 }
 
-/* Content in the hero section */
+.container {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the overlay */
+}
+
 .hero-content {
-    position: relative; /* Ensure content is above the overlay */
-    z-index: 1; /* Make sure content is above the overlay */
-    padding-left: 20px; /* Padding for left alignment */
-    padding-right: 20px; /* Padding for right alignment */
+    color: #fff; /* White text to contrast against the dimmed background */
 }
 
-.hero h1 {
-    font-size: 3rem; /* Adjust font size for heading */
-    margin-bottom: 15px; /* Add space below heading */
-    font-weight: bold; /* Make the heading bold */
+#hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 3rem;
 }
 
-.hero p {
-    font-size: 1.25rem; /* Adjust font size for paragraph */
-    color: white; /* Ensure text color is white */
-}
-
-/* Mobile responsiveness: Hero section */
-@media (max-width: 767px) {
-    .hero {
-        height: 50vh; /* Adjust height for smaller screens */
-    }
-
-    .hero h1 {
-        font-size: 2rem; /* Smaller font size on mobile */
-        text-align: center;
-    }
-
-    .hero p {
-        font-size: 1.1rem; /* Smaller font size for paragraph */
-        text-align: center;
-    }
+#hero-text {
+    font-size: 1.25rem;
 }

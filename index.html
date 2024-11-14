@@ -6,37 +6,70 @@
     <title>Home - Safeplay</title>
 
     <!-- Link to external CSS -->
-    <link href="./styling/main.css" rel="stylesheet">
+    <link href="./styling/base.css" rel="stylesheet">
     <link rel="icon" href="assets/cloud-solid.svg" type="image/x-icon">
-
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .card {
+        background-color: rgb(11, 25, 44); /* Dark background for card */
+        color: #f4f4f4; /* Light text */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+        }
+
+        .card h2 {
+        font-size: 2.5rem; /* Slightly smaller title */
+        margin-bottom: 1.5rem;
+        color: rgb(255, 101, 0); /* Orange text color */
+        }
+
+        .card h4 {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        color: #f4f4f4; /* Light text color */
+        }
+
+        .card:hover {
+            transition: all 0.3s ease-out;
+            transform: translatey(-10px);
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">SafePlay</a>
+            <a class="navbar-brand font-weight-bold text-white" href="#">SafePlay</a>
+            <!-- Custom Burger Icon (Font Awesome) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars text-white" style="font-size: 30px;"></i> <!-- Custom burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link text-white" href="./about.html">About</a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services Home</a></li>
                             <li><a class="dropdown-item" href="web.html">Web Development</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
                             <li><a class="dropdown-item" href="app.html">Android Development</a></li>
@@ -44,29 +77,42 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link text-white" href="./contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>    
 
     <!-- Hero Section (Full Screen Image) -->
     <section class="hero">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="hero-text-1 fade-text">Embracing Security</h2>
-                <h5 id="slideshow-text" class="fade-text">
-                    At SafePlay, your security is our top priority—because we believe that peace of mind is the foundation of trust.
-                </h5>
-                <div class="text-center">
-                    <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bod">
+                    <h2 class="mb-3 hero-text-1 fade-text">Embracing Security</h2>
+                    <h5 id="slideshow-text" class="mb-3 fade-text">
+                        At SafePlay, your security is our top priority—because we believe that peace of mind is the foundation of trust.
+                    </h5>
+                    <div class="mb-3 text-md-start">
+                        <a href="#" class="btn-custom">Learn More</a>
+                    </div>
                 </div>
             </div>
+    
+            <!-- Scroll Arrow Button placed below the row -->
+            <div class="scroll-arrow">
+                <a href="#services" class="scroll-link">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
+        
     </section>
+    
+    
 
-    <section class="services py-5" style="background-color: #f8f9fa;">
+    <!-- Services Section -->
+    <section class="services py-5" style="background-color: #f8f9fa;" id="services">
         <div class="container">
             <h3 class="text-center mb-4" style="font-size: 2.5rem; color: rgb(30, 62, 98);">Our Services</h3>
             <div class="row text-center">
@@ -125,63 +171,85 @@
         </div>
     </section>
     
-    <style>
-        /* Hover effect for the service cards */
-        .service-card {
-            transition: transform 0.3s ease-in-out;
-        }
-    
-        .service-card:hover {
-            transform: translateY(-10px); /* Slight upward movement on hover */
-        }
-    
-        /* Control the size of the service icons */
-        .service-card i {
-            font-size: 4rem; /* Larger icons */
-        }
-    </style>
-    
-    <section class="py-5 bg-primary text-white text-center">
-        <div class="container">
-            <h3>Let's Talk About Your Project</h3>
-            <p class="lead">Get in touch with us today and start turning your ideas into reality!</p>
-            <a href="contact.html" class="btn btn-light btn-lg">Send Message</a>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact-us py-5" style="background-image: url(https://cdn.pixabay.com/photo/2022/01/06/11/44/envelopes-6919301_1280.jpg);">
-        <div class="text-center">
-            <h1 style="color: taupe;" class="mb-3">We Will get to you as soon as possible</h1>
-        </div>
-        <div class="container" style="max-width: 600px; background-color: #ffffff; color: black; padding: 30px; border-radius: 10px;">
-            <h2 class="text-center mb-4" style="font-size: 2.5rem; color: rgb(11, 25, 44);">Contact Us</h2>
+
+   <!-- Industries We Work In -->
+   <section class="industries-banner d-flex align-items-center justify-content-between">
+    <div class="container">
+        <div class="row">
+            <!-- Industry List Section -->
+            <div class="col-md-6">
+                <h1 class="mb-5">Industries We Work In</h1>
+                <div class="industry-list">
+                    <!-- Industry 1 -->
+                    <div class="industry-item">
+                        <button class="industry-btn" data-image="https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg">
+                            <i class="fa fa-cogs"></i> Technology +
+                        </button>
+                        <div class="industry-details">
+                            <p>We specialize in developing cutting-edge technology solutions that drive innovation in various sectors.</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Industry 4 - Retail -->
+                    <div class="industry-item">
+                        <button class="industry-btn" data-image="https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_960_720.jpg">
+                            <i class="fa fa-shopping-cart"></i> Retail +
+                        </button>
+                        <div class="industry-details">
+                            <p>We help retail businesses streamline operations, enhance customer experiences, and grow sales with innovative solutions.</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Industry 5 - Startups -->
+                    <div class="industry-item">
+                        <button class="industry-btn" data-image="https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_1280.jpg">
+                            <i class="fa fa-lightbulb"></i> Startups +
+                        </button>
+                        <div class="industry-details">
+                            <p>We support startups with everything from product development to market entry strategies, helping them scale quickly.</p>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Industry 6 - Customer Service -->
+                    <div class="industry-item">
+                        <button class="industry-btn" data-image="https://cdn.pixabay.com/photo/2023/06/08/12/37/work-8049516_1280.jpg">
+                            <i class="fa fa-headphones"></i> Customer Service +
+                        </button>
+                        <div class="industry-details">
+                            <p>We optimize customer service processes, ensuring businesses can deliver exceptional support to their customers at scale.</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Contact Form -->
-            <form>
-                <!-- Name Field -->
-                <div class="mb-3">
-                    <label for="name" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                
-                <!-- Email Field -->
-                <div class="mb-3">
-                    <label for="email" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                
-                <!-- Message Field -->
-                <div class="mb-3">
-                    <label for="message" class="form-label" style="font-size: 1.2rem; color: rgb(11, 25, 44);">Your Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
-                </div>
     
-                <!-- Submit Button -->
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                </div>
-            </form>
+            <!-- Image Section -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg" alt="Industries Image" class="industry-img" id="industry-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+    <!-- Contact Us Banner -->
+    <section class="cta-banner d-flex align-items-center justify-content-between" style="background-color: lavender; padding: 30px;">
+        <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+            <!-- Left Side Text Block -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="display-5 mb-3">Contact Us Today!</h2>
+                <p class="lead mb-3">We'd love to hear from you. Get in touch with us for any inquiries or support.</p>
+                <a href="mailto:safeplayai@gmail.com" class="btn btn-outline-primary btn-lg">Get in Touch</a>
+            </div>
+            <!-- Right Side Image Block -->
+            <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+                <img src="./assets/man.png" alt="Contact Us Image" style="max-width: 300px; width: 100%;">
+            </div>
         </div>
     </section>
     
@@ -194,9 +262,7 @@
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Safeplay</h5>
                     <p>SafePlay is a forward-thinking technology company focused on developing innovative privacy-conscious software, mobile apps, and IoT solutions. We help businesses harness the power of technology while prioritizing data security and user privacy.</p>
-
                 </div>
-                
                 <!-- Column 2: Useful Links -->
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Useful Links</h5>
@@ -207,7 +273,6 @@
                         <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
-                
                 <!-- Column 3: Social Media Links -->
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Follow Us</h5>
@@ -218,10 +283,6 @@
             </div>
         </div>
     </footer>
-    
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

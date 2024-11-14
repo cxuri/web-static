@@ -32,26 +32,28 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">SafePlay</a>
+            <a class="navbar-brand font-weight-bold text-white" href="#">SafePlay</a>
+            <!-- Custom Burger Icon (Font Awesome) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars text-white" style="font-size: 30px;"></i> <!-- Custom burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link text-white" href="./about.html">About</a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services Home</a></li>
                             <li><a class="dropdown-item" href="web.html">Web Development</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
                             <li><a class="dropdown-item" href="app.html">Android Development</a></li>
@@ -59,7 +61,7 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link text-white" href="./contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -95,9 +97,9 @@
 
     <section id="roadmap" class="py-5" style="background-color: rgb(255, 255, 255);">
         <div class="container">
-            <h2 class="text-center mb-4">App Development Roadmap</h2>
-            <p class="text-center mb-5">A step-by-step journey of how we bring your app idea to life. Here's what you can expect during the development process.</p>
-
+            <h2 class="text-center mb-4 text-dark">App Development Roadmap</h2>
+            <p class="text-center mb-5 text-dark">A step-by-step journey of how we bring your app idea to life. Here's what you can expect during the development process.</p>
+    
             <div class="row">
                 <!-- Roadmap Items -->
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
@@ -105,63 +107,64 @@
                         <div class="step-circle bg-primary text-white mx-auto mb-3">
                             <i class="fas fa-search fa-2x"></i>
                         </div>
-                        <h5>Discovery & Planning</h5>
-                        <p>Define the project goals, target audience, features, and platform requirements.</p>
+                        <h5 class="text-dark">Discovery & Planning</h5>
+                        <p class="text-dark">Define the project goals, target audience, features, and platform requirements.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-success text-white mx-auto mb-3">
                             <i class="fas fa-pencil-ruler fa-2x"></i>
                         </div>
-                        <h5>Design</h5>
-                        <p>UI/UX designs and prototypes for user flows and app layout.</p>
+                        <h5 class="text-dark">Design</h5>
+                        <p class="text-dark">UI/UX designs and prototypes for user flows and app layout.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-warning text-white mx-auto mb-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
-                        <h5>Development</h5>
-                        <p>Build the back-end, front-end, and integrate APIs for full functionality.</p>
+                        <h5 class="text-dark">Development</h5>
+                        <p class="text-dark">Build the back-end, front-end, and integrate APIs for full functionality.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-info text-white mx-auto mb-3">
                             <i class="fas fa-bug fa-2x"></i>
                         </div>
-                        <h5>Testing</h5>
-                        <p>QA testing, user testing, and bug fixing to ensure stability and performance.</p>
+                        <h5 class="text-dark">Testing</h5>
+                        <p class="text-dark">QA testing, user testing, and bug fixing to ensure stability and performance.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-danger text-white mx-auto mb-3">
                             <i class="fas fa-rocket fa-2x"></i>
                         </div>
-                        <h5>Launch & Deployment</h5>
-                        <p>Deploy the app to App Store and Google Play, and monitor feedback.</p>
+                        <h5 class="text-dark">Launch & Deployment</h5>
+                        <p class="text-dark">Deploy the app to App Store and Google Play, and monitor feedback.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-dark text-white mx-auto mb-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
-                        <h5>Post-Launch Support</h5>
-                        <p>Regular updates, maintenance, and user support.</p>
+                        <h5 class="text-dark">Post-Launch Support</h5>
+                        <p class="text-dark">Regular updates, maintenance, and user support.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <div class="bg-secondary text-center d-flex align-items-center justify-content-center" style="padding: 40px;">
         <div class="text-white">
@@ -174,101 +177,102 @@
     
     
 
-    <!-- Core Services Section -->
-    <section id="core-services" class="py-5" style="background-color: var(--primary-color);">
-        <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--secondary-color);">Core Application Development Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <!-- Service 1: Custom Web App Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Custom Web Application Development</h5>
-                            <p class="card-text">We build custom web applications tailored to your business needs, ensuring scalability, security, and a seamless user experience across all platforms.</p>
-                        </div>
+   <!-- Core Services Section -->
+<section id="core-services" class="py-5" style="background-color: var(--primary-color);">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: var(--secondary-color);">Core Application Development Services</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Service 1: Custom Web App Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Custom Web Application Development</h5>
+                        <p class="card-text text-dark">We build custom web applications tailored to your business needs, ensuring scalability, security, and a seamless user experience across all platforms.</p>
                     </div>
                 </div>
-    
-                <!-- Service 2: Mobile App Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Mobile App Development</h5>
-                            <p class="card-text">Our mobile app development services focus on creating intuitive and high-performance apps for both iOS and Android. From concept to deployment, we build apps that engage and convert.</p>
-                        </div>
+            </div>
+
+            <!-- Service 2: Mobile App Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Mobile App Development</h5>
+                        <p class="card-text text-dark">Our mobile app development services focus on creating intuitive and high-performance apps for both iOS and Android. From concept to deployment, we build apps that engage and convert.</p>
                     </div>
                 </div>
-    
-                <!-- Service 3: Cross-Platform Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-sync-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Cross-Platform App Development</h5>
-                            <p class="card-text">Reach users on multiple platforms with a single codebase. We use technologies like React Native and Flutter to create apps that run smoothly on both iOS and Android devices.</p>
-                        </div>
+            </div>
+
+            <!-- Service 3: Cross-Platform Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-sync-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Cross-Platform App Development</h5>
+                        <p class="card-text text-dark">Reach users on multiple platforms with a single codebase. We use technologies like React Native and Flutter to create apps that run smoothly on both iOS and Android devices.</p>
                     </div>
                 </div>
-    
-                <!-- Service 4: UI/UX Design for Apps -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-paint-brush fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">UI/UX Design for Apps</h5>
-                            <p class="card-text">We design user-friendly, intuitive, and visually appealing interfaces that ensure your app offers a great user experience, keeping your users engaged.</p>
-                        </div>
+            </div>
+
+            <!-- Service 4: UI/UX Design for Apps -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-paint-brush fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">UI/UX Design for Apps</h5>
+                        <p class="card-text text-dark">We design user-friendly, intuitive, and visually appealing interfaces that ensure your app offers a great user experience, keeping your users engaged.</p>
                     </div>
                 </div>
-    
-                <!-- Service 5: Backend Development for Apps -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Backend Development for Apps</h5>
-                            <p class="card-text">We build robust back-end systems to power your app, using scalable and secure technologies like Node.js, Python, and Ruby on Rails for handling databases and server-side logic.</p>
-                        </div>
+            </div>
+
+            <!-- Service 5: Backend Development for Apps -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Backend Development for Apps</h5>
+                        <p class="card-text text-dark">We build robust back-end systems to power your app, using scalable and secure technologies like Node.js, Python, and Ruby on Rails for handling databases and server-side logic.</p>
                     </div>
                 </div>
-    
-                <!-- Service 6: API Integration -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-plug fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">API Integration</h5>
-                            <p class="card-text">We integrate third-party services and APIs to extend the functionality of your app, ensuring seamless communication with external services and data sources.</p>
-                        </div>
+            </div>
+
+            <!-- Service 6: API Integration -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plug fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">API Integration</h5>
+                        <p class="card-text text-dark">We integrate third-party services and APIs to extend the functionality of your app, ensuring seamless communication with external services and data sources.</p>
                     </div>
                 </div>
-    
-                <!-- Service 7: App Security & Maintenance -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">App Security & Maintenance</h5>
-                            <p class="card-text">We provide ongoing app maintenance and security updates, ensuring your app remains secure, efficient, and up-to-date with the latest features and standards.</p>
-                        </div>
+            </div>
+
+            <!-- Service 7: App Security & Maintenance -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">App Security & Maintenance</h5>
+                        <p class="card-text text-dark">We provide ongoing app maintenance and security updates, ensuring your app remains secure, efficient, and up-to-date with the latest features and standards.</p>
                     </div>
                 </div>
-    
-                <!-- Service 8: Cloud App Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Cloud App Development</h5>
-                            <p class="card-text">We leverage cloud technologies to build scalable, high-performance applications that deliver enhanced flexibility, security, and cost-effectiveness.</p>
-                        </div>
+            </div>
+
+            <!-- Service 8: Cloud App Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Cloud App Development</h5>
+                        <p class="card-text text-dark">We leverage cloud technologies to build scalable, high-performance applications that deliver enhanced flexibility, security, and cost-effectiveness.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     
 
     <section class="py-5 bg-dark text-white text-center">
@@ -315,7 +319,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link to external JS -->
     <script src="./scripts/app.js"></script>
-    <script src=""></script>
+    <script src="/scripts/home.js"></script>
 
 </body>
 </html>

@@ -32,39 +32,41 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">SafePlay</a>
+            <a class="navbar-brand font-weight-bold text-white" href="#">SafePlay</a>
+            <!-- Custom Burger Icon (Font Awesome) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars text-white" style="font-size: 30px;"></i> <!-- Custom burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link text-white" href="./about.html">About</a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services Home</a></li>
                             <li><a class="dropdown-item" href="web.html">Web Development</a></li>
-                            <li><a class="dropdown-item active" href="iot.html">IoT Development</a></li>
+                            <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
                             <li><a class="dropdown-item" href="app.html">Android Development</a></li>
                             <li><a class="dropdown-item" href="sft.html">Software Development</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link text-white" href="./contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> 
 
     <!-- Hero Section -->
     <section class="hero d-flex justify-content-start align-items-center text-start" style="background-image: url('https://cdn.pixabay.com/photo/2017/10/09/19/54/iot-2830409_1280.jpg'); height: 40vh; background-size: cover; background-position: center;">
@@ -93,7 +95,7 @@
         <div class="container">
             <h2 class="text-center mb-4">IoT & Embedded Systems Development Roadmap</h2>
             <p class="text-center mb-5">Our roadmap outlines the key stages we follow to ensure a successful IoT or embedded system development project. From concept to deployment, we make sure your product meets the highest standards of performance and security.</p>
-
+    
             <div class="row">
                 <!-- Roadmap Items -->
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
@@ -101,63 +103,64 @@
                         <div class="step-circle bg-primary text-white mx-auto mb-3">
                             <i class="fas fa-search fa-2x"></i>
                         </div>
-                        <h5>Discovery & Planning</h5>
-                        <p>Identify project goals, assess hardware and software requirements, and define system architecture.</p>
+                        <h5 class="text-dark">Discovery & Planning</h5>
+                        <p class="text-dark">Identify project goals, assess hardware and software requirements, and define system architecture.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-success text-white mx-auto mb-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
-                        <h5>Design</h5>
-                        <p>Create hardware and software designs, sensor integration, and develop wireframes for interfaces.</p>
+                        <h5 class="text-dark">Design</h5>
+                        <p class="text-dark">Create hardware and software designs, sensor integration, and develop wireframes for interfaces.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-warning text-white mx-auto mb-3">
                             <i class="fas fa-microchip fa-2x"></i>
                         </div>
-                        <h5>Hardware Prototyping</h5>
-                        <p>Develop and test prototypes for embedded systems, IoT devices, and sensor networks.</p>
+                        <h5 class="text-dark">Hardware Prototyping</h5>
+                        <p class="text-dark">Develop and test prototypes for embedded systems, IoT devices, and sensor networks.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-info text-white mx-auto mb-3">
                             <i class="fas fa-code fa-2x"></i>
                         </div>
-                        <h5>Software Development</h5>
-                        <p>Develop device firmware, cloud integration, and user applications for real-time data processing.</p>
+                        <h5 class="text-dark">Software Development</h5>
+                        <p class="text-dark">Develop device firmware, cloud integration, and user applications for real-time data processing.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-danger text-white mx-auto mb-3">
                             <i class="fas fa-rocket fa-2x"></i>
                         </div>
-                        <h5>Testing & Optimization</h5>
-                        <p>Conduct rigorous testing of hardware, firmware, and software to ensure seamless integration.</p>
+                        <h5 class="text-dark">Testing & Optimization</h5>
+                        <p class="text-dark">Conduct rigorous testing of hardware, firmware, and software to ensure seamless integration.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-dark text-white mx-auto mb-3">
                             <i class="fas fa-cloud fa-2x"></i>
                         </div>
-                        <h5>Launch & Deployment</h5>
-                        <p>Deploy the solution to production, monitor performance, and collect user feedback for improvements.</p>
+                        <h5 class="text-dark">Launch & Deployment</h5>
+                        <p class="text-dark">Deploy the solution to production, monitor performance, and collect user feedback for improvements.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <div class="bg-secondary text-center d-flex align-items-center justify-content-center" style="padding: 40px;">
         <div class="text-white">
@@ -180,69 +183,70 @@
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-microchip fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">IoT Device Development</h5>
-                            <p class="card-text">We design and develop smart IoT devices to collect, transmit, and analyze data in real-time for various applications.</p>
+                            <h5 class="card-title text-dark">IoT Device Development</h5>
+                            <p class="card-text text-dark">We design and develop smart IoT devices to collect, transmit, and analyze data in real-time for various applications.</p>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Service 2: Embedded Systems Design -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Embedded Systems Design</h5>
-                            <p class="card-text">We specialize in designing custom embedded systems with high reliability, low power consumption, and performance optimization.</p>
+                            <h5 class="card-title text-dark">Embedded Systems Design</h5>
+                            <p class="card-text text-dark">We specialize in designing custom embedded systems with high reliability, low power consumption, and performance optimization.</p>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Service 3: Cloud IoT Solutions -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Cloud IoT Solutions</h5>
-                            <p class="card-text">We provide cloud-based solutions for IoT devices, enabling data storage, analytics, and device management.</p>
+                            <h5 class="card-title text-dark">Cloud IoT Solutions</h5>
+                            <p class="card-text text-dark">We provide cloud-based solutions for IoT devices, enabling data storage, analytics, and device management.</p>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Service 4: Smart Home Systems -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-home fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Smart Home Systems</h5>
-                            <p class="card-text">We create IoT solutions for smart homes, including automated devices, energy monitoring, and home security systems.</p>
+                            <h5 class="card-title text-dark">Smart Home Systems</h5>
+                            <p class="card-text text-dark">We create IoT solutions for smart homes, including automated devices, energy monitoring, and home security systems.</p>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Service 5: Sensor Networks -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-satellite-dish fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Sensor Networks</h5>
-                            <p class="card-text">We design and deploy wireless sensor networks for monitoring environments, industrial processes, and smart cities.</p>
+                            <h5 class="card-title text-dark">Sensor Networks</h5>
+                            <p class="card-text text-dark">We design and deploy wireless sensor networks for monitoring environments, industrial processes, and smart cities.</p>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Service 6: Real-Time Data Processing -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-tachometer-alt fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Real-Time Data Processing</h5>
-                            <p class="card-text">We develop systems that enable real-time data analysis and decision-making using edge computing and cloud integration.</p>
+                            <h5 class="card-title text-dark">Real-Time Data Processing</h5>
+                            <p class="card-text text-dark">We develop systems that enable real-time data analysis and decision-making using edge computing and cloud integration.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     
 
     <section class="py-5 bg-dark text-white text-center">
@@ -289,6 +293,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link to external JS -->
     <script src="./scripts/iot.js"></script>
+    <script src="./scripts/home.js"></script>
 
 </body>
 </html>

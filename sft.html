@@ -32,39 +32,41 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">SafePlay</a>
+            <a class="navbar-brand font-weight-bold text-white" href="#">SafePlay</a>
+            <!-- Custom Burger Icon (Font Awesome) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars text-white" style="font-size: 30px;"></i> <!-- Custom burger icon -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link text-white" href="./about.html">About</a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services Home</a></li>
                             <li><a class="dropdown-item" href="web.html">Web Development</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT Development</a></li>
                             <li><a class="dropdown-item" href="app.html">Android Development</a></li>
-                            <li><a class="dropdown-item active" href="sft.html">Software Development</a></li>
+                            <li><a class="dropdown-item" href="sft.html">Software Development</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link text-white" href="./contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> 
 
     <!-- Hero Section -->
     <section class="hero d-flex justify-content-start align-items-center text-start" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/22/22/05/programming-1851192_1280.jpg'); height: 40vh; background-size: cover; background-position: center;">
@@ -91,9 +93,9 @@
 
     <section id="roadmap" class="py-5" style="background-color: rgb(255, 255, 255);">
         <div class="container">
-            <h2 class="text-center mb-4">Software Development Roadmap</h2>
-            <p class="text-center mb-5">Here’s an overview of the process we follow to bring your software project from concept to reality. Our roadmap ensures that your project stays on track, within budget, and meets all your business requirements.</p>
-
+            <h2 class="text-center mb-4 text-dark">Software Development Roadmap</h2>
+            <p class="text-center mb-5 text-dark">Here’s an overview of the process we follow to bring your software project from concept to reality. Our roadmap ensures that your project stays on track, within budget, and meets all your business requirements.</p>
+    
             <div class="row">
                 <!-- Roadmap Items -->
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
@@ -101,63 +103,64 @@
                         <div class="step-circle bg-primary text-white mx-auto mb-3">
                             <i class="fas fa-search fa-2x"></i>
                         </div>
-                        <h5>Discovery & Planning</h5>
-                        <p>Identify project goals, gather requirements, and define technical specifications.</p>
+                        <h5 class="text-dark">Discovery & Planning</h5>
+                        <p class="text-dark">Identify project goals, gather requirements, and define technical specifications.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-success text-white mx-auto mb-3">
                             <i class="fas fa-pencil-ruler fa-2x"></i>
                         </div>
-                        <h5>Design</h5>
-                        <p>Architect the solution with detailed system designs, wireframes, and UI/UX concepts.</p>
+                        <h5 class="text-dark">Design</h5>
+                        <p class="text-dark">Architect the solution with detailed system designs, wireframes, and UI/UX concepts.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-warning text-white mx-auto mb-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
-                        <h5>Development</h5>
-                        <p>Code the application backend, frontend, and integrate third-party APIs.</p>
+                        <h5 class="text-dark">Development</h5>
+                        <p class="text-dark">Code the application backend, frontend, and integrate third-party APIs.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-info text-white mx-auto mb-3">
                             <i class="fas fa-bug fa-2x"></i>
                         </div>
-                        <h5>Testing</h5>
-                        <p>Perform rigorous testing to ensure the software is bug-free and performs optimally.</p>
+                        <h5 class="text-dark">Testing</h5>
+                        <p class="text-dark">Perform rigorous testing to ensure the software is bug-free and performs optimally.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-danger text-white mx-auto mb-3">
                             <i class="fas fa-rocket fa-2x"></i>
                         </div>
-                        <h5>Launch & Deployment</h5>
-                        <p>Deploy the software to production environments, monitor for issues, and gather feedback.</p>
+                        <h5 class="text-dark">Launch & Deployment</h5>
+                        <p class="text-dark">Deploy the software to production environments, monitor for issues, and gather feedback.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class="text-center">
                         <div class="step-circle bg-dark text-white mx-auto mb-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
-                        <h5>Post-Launch Support</h5>
-                        <p>Provide ongoing maintenance, updates, and support to keep your software running smoothly.</p>
+                        <h5 class="text-dark">Post-Launch Support</h5>
+                        <p class="text-dark">Provide ongoing maintenance, updates, and support to keep your software running smoothly.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <div class="bg-secondary text-center d-flex align-items-center justify-content-center" style="padding: 40px;">
         <div class="text-white">
@@ -171,78 +174,81 @@
     
 
     <!-- Core Services Section -->
-    <section id="core-services" class="py-5" style="background-color: var(--primary-color);">
-        <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--secondary-color);">Core Software Development Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <!-- Service 1: Custom Software Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Custom Software Development</h5>
-                            <p class="card-text">We design and develop custom software solutions to meet the unique needs of your business, ensuring scalability, performance, and security.</p>
-                        </div>
+<!-- Core Services Section -->
+<section id="core-services" class="py-5" style="background-color: var(--primary-color);">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: var(--secondary-color);">Core Software Development Services</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Service 1: Custom Software Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cogs fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Custom Software Development</h5>
+                        <p class="card-text text-dark">We design and develop custom software solutions to meet the unique needs of your business, ensuring scalability, performance, and security.</p>
                     </div>
                 </div>
-    
-                <!-- Service 2: Enterprise Software Solutions -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-building fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Enterprise Software Solutions</h5>
-                            <p class="card-text">We build powerful and scalable enterprise applications that streamline operations, increase efficiency, and improve business workflows.</p>
-                        </div>
+            </div>
+
+            <!-- Service 2: Enterprise Software Solutions -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-building fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Enterprise Software Solutions</h5>
+                        <p class="card-text text-dark">We build powerful and scalable enterprise applications that streamline operations, increase efficiency, and improve business workflows.</p>
                     </div>
                 </div>
-    
-                <!-- Service 3: System Integration -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-plug fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">System Integration</h5>
-                            <p class="card-text">Our integration services connect disparate systems to improve the flow of data and enhance your software’s capabilities.</p>
-                        </div>
+            </div>
+
+            <!-- Service 3: System Integration -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plug fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">System Integration</h5>
+                        <p class="card-text text-dark">Our integration services connect disparate systems to improve the flow of data and enhance your software’s capabilities.</p>
                     </div>
                 </div>
-    
-                <!-- Service 4: Application Maintenance -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-wrench fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Application Maintenance</h5>
-                            <p class="card-text">We provide ongoing maintenance and support to ensure your software remains up-to-date, secure, and performs at its best.</p>
-                        </div>
+            </div>
+
+            <!-- Service 4: Application Maintenance -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-wrench fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Application Maintenance</h5>
+                        <p class="card-text text-dark">We provide ongoing maintenance and support to ensure your software remains up-to-date, secure, and performs at its best.</p>
                     </div>
                 </div>
-    
-                <!-- Service 5: Cloud Software Development -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Cloud Software Development</h5>
-                            <p class="card-text">Our cloud-based solutions offer greater flexibility, scalability, and security for your software, enabling seamless access and collaboration.</p>
-                        </div>
+            </div>
+
+            <!-- Service 5: Cloud Software Development -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cloud fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Cloud Software Development</h5>
+                        <p class="card-text text-dark">Our cloud-based solutions offer greater flexibility, scalability, and security for your software, enabling seamless access and collaboration.</p>
                     </div>
                 </div>
-    
-                <!-- Service 6: Software Testing -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-vials fa-3x mb-3" style="color: var(--secondary-color);"></i>
-                            <h5 class="card-title">Software Testing</h5>
-                            <p class="card-text">We provide rigorous testing services to ensure that your software is free from bugs and functions flawlessly under all conditions.</p>
-                        </div>
+            </div>
+
+            <!-- Service 6: Software Testing -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-vials fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                        <h5 class="card-title text-dark">Software Testing</h5>
+                        <p class="card-text text-dark">We provide rigorous testing services to ensure that your software is free from bugs and functions flawlessly under all conditions.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
     
 
     <section class="py-5 bg-dark text-white text-center">
@@ -289,7 +295,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link to external JS -->
     <script src="./scripts/app.js"></script>
-    <script src=""></script>
+    <script src="./scripts/home.js"></script>
 
 </body>
 </html>
